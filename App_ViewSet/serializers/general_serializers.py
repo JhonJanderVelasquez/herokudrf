@@ -1,4 +1,4 @@
-from API.models import Producto, Imagen
+from App_ViewSet.models import Producto, Imagen
 from rest_framework import serializers
 
 class ProductSerializer(serializers.ModelSerializer):
