@@ -6,7 +6,6 @@ from rest_framework.response import Response
 from App_ViewSet.serializers.general_serializers import ImageSerializer
 
 
-
 class ImageViewSet(viewsets.ModelViewSet):
     serializer_class = ImageSerializer
 
@@ -17,7 +16,7 @@ class ImageViewSet(viewsets.ModelViewSet):
             return self.get_serializer().Meta.model.objects.filter(id = pk).first()
 
     # Sobreescribiendo método post de la clase
-    def post (self, request): 
+    def create (self, request): 
         serializer = self.serializer_class(data = request.data)
         if serializer.is_valid():
             serializer.save()

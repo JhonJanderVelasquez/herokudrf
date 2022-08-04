@@ -5,7 +5,7 @@ from rest_framework.response import Response
 # Trae el serializador para producto
 from App_ViewSet.serializers.general_serializers import ProductSerializer
 
-# Crear y listar productos
+
 class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
 
