@@ -9,12 +9,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
 
+    <style>
+
+        .center{
+            display:flex; 
+            align-items: 
+            center; justify-content: center;"
+        }
+
+    </style>
+
+
     <title>Main</title>
 </head>
 <body>
 
 
-    <div class="p-2 mb-2 bg-primary bg-gradient fw-bold text-white sticky-top text-center">
+    <div class="p-2 mb-2 bg-dark bg-gradient fw-bold text-white sticky-top text-center">
         <h1>REST API CON VIEWSET PARA ZAITO</h1>
     </div>    
 
@@ -22,35 +33,84 @@
     <div class="container">
         <div class="row">
             <div class="col">               
-                <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded text-center">                                    
-                    <div class="p-3 mb-2 bg-primary bg-gradient fw-bold text-white rounded">
-                        <h5>INSTRUCCIONES PARA EL MANEJO DE LA API</h5>
-                    </div>
+                <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded">                                    
 
 
                     <div class="container mb-3">
 
-                        <p class="mb-5">
-                            <span class="lead">Las urls disponibles para consultar en la API son:</span> <br>
-                            El respositorio de esta API lo puedes encontrar 
-                            <a href="https://github.com/JhonJanderVelasquez/Rest_API_ViewSet_Entrevista">aquí</a>.<br>
-                            1. https://apirestzaito.herokuapp.com/api/products/<br>
-                            2. https://apirestzaito.herokuapp.com/api/images/<br><br>
+                        <div class="container p-3 my-2 mb-5 bg-gradient bg-dark text-white rounded">
+                            <h2 class="fw-bold">INSTRUCCIONES DE LA API:</h2>
+                            <p>El respositorio de esta API lo puedes encontrar 
+                                <a href="https://github.com/JhonJanderVelasquez/Rest_API_ViewSet_Entrevista" target="_blank">aquí</a>. 
+                            </p>
+                        
+                        </div>
 
-                            3. https://apirestzaito.herokuapp.com/api/products/{id}<br>
-                            4. https://apirestzaito.herokuapp.com/api/images/{id}<br><br>
+                        <div class="table-responsive">
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                    <td>1</td><td>apirestzaito.herokuapp.com/api/products/</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td><td>apirestzaito.herokuapp.com/api/images/</td>
+                                </tr>
 
-                            <ul style="text-align: left;">
-                                <li>Si deseas por ejemplo consultar todos los productos, usas la 1ra url.<br></li>
-                                <li>Si deseas consultar solo la información de un producto, entonces la 3ra url.<br></li>
-                                <li>Si deseas realizar un POST para crear un nuevo producto, envías la petición por la 1ra url.<br></li>
-                                <li>Si deseas realizar un DELETE de un producto, lo haces a través de la 3ra url.<br></li>
-                                Y así sucesivamente...
-                            </ul>
-                        </p>
+                                <tr>
+                                    <td>3</td><td>apirestzaito.herokuapp.com/api/products/{id}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td><td>apirestzaito.herokuapp.com/api/images/{id}</td>
+                                </tr>
+
+                              </tbody>
+                        </table>
+                      </div>
+
+                      <div class="card mb-5">
+                        <div class="card-header fw-bold text-center">
+                            INSTRUCCIONES API POSTMAN PARA PRODUCTOS
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Si deseas consultar todos los productos, usas la 1ra url. Este es un método <b>List</b>.</li>
+                          <li class="list-group-item">Para consultar solo la información de un producto, usas la 3ra url. Este es un método de tipo <b>Retrieve</b>.</li>
+                          <li class="list-group-item">Para crear un nuevo producto, envías la petición en formato JSON usando la 1ra url. Este es un método de tipo <b>Create</b> </li>
+                          <li class="list-group-item">Para eliminar un producto, lo puedes hacer a través de la 3ra url. Este es un método de tipo <b>Destroy</b></li>
+                          <li class="list-group-item">Si deseas actualizar un producto, lo puedes hacer a través de la 3ra url. Este es un método de tipo <b>Update</b></li>
+                        </ul>
+                      </div>
 
 
-                        <div class="row mb-5">
+                    <hr/>
+
+                      
+                    <div class="text-center">
+
+
+                        <div class="row mb-5 center">
+                            <div class="col card shadow bg-light p-4" >
+                                    Si deseas detallar la documentación tipo Swagger para conocer todos las urls
+                                    permitidas por la API,
+                                    entonces da clic sobre el libro que está a la derecha.
+                            </div> 
+                            <div class="col">
+                                <div>
+                                    <a href="/api/images"> 
+                                        <lord-icon
+                                            src="https://cdn.lordicon.com/ttioogfl.json"
+                                            trigger="morph"
+                                            style="width:100px;height:100px">
+                                        </lord-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr/>
+
+
+                        <div class="row mb-5 center">
                             <div class="col">
                                 <a href="/api/products"> 
                                     <lord-icon
@@ -62,20 +122,21 @@
                                 </lord-icon>
                                 </a>
                             </div>
-                            <div class="col card shadow">
-                                <p>
+                            <div class="col card shadow bg-light p-4">
                                     Si deseas consultar todos los productos de la base de datos de la API,
                                     entonces da clic sobre el carrito que está en la parte izquierda.
-                                </p>
                             </div> 
+
                         </div>
 
-                        <div class="row mb-5">
-                            <div class="col card shadow">
-                                <p>
+
+                        <hr/>
+
+
+                        <div class="row mb-5 center">
+                            <div class="col card shadow bg-light p-4">
                                     Si deseas consultar todos las imágenes de la base de datos de la API,
                                     entonces da clic sobre la cámara que está a la derecha.
-                                </p>
                             </div> 
                             <div class="col">
                                 <div>
@@ -90,7 +151,15 @@
                             </div>
                         </div>
 
+                        <hr/>
 
+                        <div class="container mt-3" style="text-align:right;">
+                            <p>CONTACTO</p>
+                            <p>Jhon Jander Velásquez Llanos</p>
+                            jhonjandervelasquezllanos@gmail.com
+                        </div>
+
+                    </div>
                 </div>    
             </div>
         </div>
