@@ -1,0 +1,1 @@
+web: gunicorn Project_DRF.wsgi
