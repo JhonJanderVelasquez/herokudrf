@@ -3,7 +3,7 @@
 # 1. CONFIGURACIÓN INICIAL
 Rest API construída con el framework de Django y con vistas ViewSets. 
 
-1. Clonar este respositorio
+1. Clonar este repositorio
 ```
 https://github.com/JhonJanderVelasquez/Rest_API_ViewSet_Entrevista.git
 ```
